@@ -1,35 +1,63 @@
-<<<<<<< HEAD
-=======
 .App {
   text-align: center;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh
+}
+
+/*----- MainWeather css------ */
+.main {
+  height: 400px;
+  width: 800px;border-radius: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: relative;
+  background-color: #afb4c2;
 }
 
-.App-link {
-  color: #61dafb;
+.inner-main {
+width: 800px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-main > img {
+position: relative;
+left: -200px;
+top: 40px;
+width: 300px;
 }
->>>>>>> 02183c526ea1bab9337b10ad73d5c20015a52afb
+
+.today {
+position: relative;
+right: 80px;
+top: 60px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-end;
+}
+/* ------Input css ----*/
+.city-input {
+  width: 500px;
+  position: relative;
+  top: 78px;  
+}
+/*------- Weatherbox css ---------*/
+.weather-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  color: black;
+}
+
+.weather-box > h1 {
+  font-size: 20px;
+}

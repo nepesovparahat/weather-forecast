@@ -1,63 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+  user-select: none;
+}
 .App {
   text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh
+body {
+  background-image: url("./components/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 /*----- MainWeather css------ */
 .main {
-  height: 400px;
-  width: 800px;border-radius: 30px;
+  z-index: 1;
+  top: 100px;
+  position: relative;
+  height: 480px;
+  width: 1250px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: #afb4c2;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 15px silver;
 }
 
 .inner-main {
-width: 800px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.inner-main > img {
-position: relative;
-left: -200px;
-top: 40px;
-width: 300px;
-}
-
-.today {
-position: relative;
-right: 80px;
-top: 60px;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-end;
-}
-/* ------Input css ----*/
-.city-input {
-  width: 500px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  top: 78px;  
 }
+
+.inner-main p {
+  padding: 0px 0px 5px 0px;
+  position: relative;
+  transition: all 0.5s ease-out;
+  color: #113555;
+}
+
 /*------- Weatherbox css ---------*/
+
 .weather-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  border: 1px solid green;
-  color: black;
+  width: 170px;
+  height: 170px;
+  border-radius: 30%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 0px 8px silver;
+  padding-bottom: 10px;
+  margin: 15px;
+  z-index: 2;
+}
+.box-weather {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+}
+.weather-box > h1 {
+  margin-top: 20px;
+  font-size: 20px;
 }
 
-.weather-box > h1 {
+.temp {
+  padding-bottom: 10px;
+  font-size: 0.93em;
+}
+.city-input {
+  top: -20px;
+  width: 600px;
+  display: inline-block;
+  padding: 10px 0px 10px 30px;
+  line-height: 120%;
+  position: relative;
+  border-radius: 20px;
+  outline: currentcolor none medium;
   font-size: 20px;
+  transition: all 0.5s ease-out 0s;
 }

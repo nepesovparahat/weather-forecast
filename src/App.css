@@ -1,9 +1,14 @@
-* {
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   color: black;
   user-select: none;
+}
+html{
+    box-sizing: border-box;
 }
 .App {
   text-align: center;
@@ -14,11 +19,35 @@ body {
   background-size: cover;
   background-position: center;
 }
-.header-weather {
+
+/*----------------Laptop media screen-----------------*/
+@media only screen and (min-width: 768px) {
+	
+.box-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.city-input:focus{
+  opacity: 1.3;
+  box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+      
+}
+	
+}
+
+/*----------------- Media only screen phone ------------------*/
+@media only screen and (min-width: 480px)  {
+
+  .header-weather {
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  margin: 0 50px 0 50px;
 }
 
 /*----- MainWeather css------ */
@@ -27,19 +56,20 @@ body {
   top: 100px;
   position: relative;
   height: 480px;
-  width: 1250px;
+  width: 100%;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin:0 7% 0 7%;
   align-items: center;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 0px 15px silver;
 }
 
 .inner-main {
-  width: 800px;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,8 +101,9 @@ body {
 }
 .box-weather {
   display: flex;
-  justify-content: center;
+  flex-flow: row wrap;
   box-sizing: border-box;
+  justify-content: center;
   align-items: center;
 }
 .weather-box > h1 {
@@ -85,7 +116,6 @@ body {
   font-size: 0.93em;
 }
 .city-input {
-  top: -20px;
   width: 600px;
   display: inline-block;
   padding: 10px 0px 10px 30px;
@@ -95,4 +125,7 @@ body {
   outline: currentcolor none medium;
   font-size: 20px;
   transition: all 0.5s ease-out 0s;
+  
+}
+
 }

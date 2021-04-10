@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.css";
-import MainWeather from './components/MainWeather';
-import WeatherBox from "./components/WeatherBox";
+import MainWeather from "./components/MainWeather";
 
-const App = ( props) => {
+const App = () => {
+  
   return (
     <div className="App">
-    <header className="header-weather">
-        <MainWeather/> 
-    </header>
-</div>
-  )
+      <header className="header-weather">
+        <MainWeather />
+      </header>
+    </div>
+  );
 };
 
 export default App;

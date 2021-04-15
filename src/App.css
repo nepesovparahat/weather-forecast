@@ -32,11 +32,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .city-input:focus {
-    opacity: 1.3;
-    box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd,
-      -3px 3px 30px #10abff;
-  }
 }
 
 /*----------------- Media only screen phone ------------------*/
@@ -52,6 +47,7 @@ body {
 
   /*----- MainWeather css------ */
   .main {
+    top: 20px;
     z-index: 1;
     position: relative;
     height: 480px;
@@ -103,7 +99,7 @@ body {
     box-sizing: border-box;
     justify-content: center;
     flex-flow: row wrap;
-    bottom:120px;
+    bottom:100px;
   }
   .weather-box > h1 {
     font-size: 20px;
@@ -112,16 +108,7 @@ body {
   .temp {
     font-size: 1.1em;
   }
-  .city-input {
-    width: 600px;
-    padding: 10px 0px 10px 30px;
-    line-height: 20px;
-    position: relative;
-    border-radius: 20px;
-    outline: none;
-    font-size: 20px;
-    transition: all 0.5s ease-out 0s;
-  }
+  
   .weather-desc {
     text-transform: capitalize;
     font-size: 18px;

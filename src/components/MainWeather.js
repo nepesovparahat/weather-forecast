@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import getWeatherByCity from "../api/server";
 import WeatherBox from "./WeatherBox";
+import { useStyles } from 'react-styles-hook';
 
 const MainWeather = () => {
   const [days, setDays] = useState([]);
@@ -17,7 +18,7 @@ const MainWeather = () => {
     if ((response === "Error") && (eventkey === 13)) {
       e.target.placeholder = "City was not found, try again...";
       e.target.value='';
-      
+      setError("Error")
     } 
     else {
       if (eventkey === 13) {
@@ -42,6 +43,23 @@ const MainWeather = () => {
       }
     }
   };
+  const style = useStyles({
+    inputStyle: {
+        top: cityName ? '-120px': '100px',
+        width:'600px',
+        display: 'inline-block',
+        padding: '10px 0px 10px 30px',
+        lineHeight: '20px',
+        position: 'relative',
+        borderRadius: '20px',
+        outline: 'none',
+        fontSize: '20px',
+        transition: 'all 0.5s ease-out',
+        boxShadow: !error ? 'inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd,-3px 3px 30px #10abff': 'inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #ea1b9b,-3px 3px 30px #f70101'
+    }
+    
+  })
+  
 
   // With the map function, I deleted the first object of the 5-day weather forecast object and added it to divs.
   const WeatherBoxes = () => {
@@ -53,21 +71,20 @@ const MainWeather = () => {
 
     return <ul className="weather-box-list">{weatherBoxes}</ul>;
   };
-
   return (
     <>
       <div className="main">
         <div className="inner-main">
           <input
             type="text"
-            className="city-input"
+            style={style.inputStyle}
             name="city"
+            className="city-name"
             id="inputCity"
             placeholder = "Enter Country or City name..."
             onKeyPress={getWeather}
           />
         </div>
-        <div>{error ? <p className="error">{error}</p> : null}</div>
         <h1>
           {cityName} {Countr}
         </h1>

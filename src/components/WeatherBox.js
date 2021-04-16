@@ -1,7 +1,6 @@
 import React from "react";
 
 const WeatherBox = (props) => {
-
   const getImage = (imgName) => {
     return `https://openweathermap.org/img/wn/${imgName}@2x.png`;
   };
@@ -18,7 +17,7 @@ const WeatherBox = (props) => {
   const WeekDaysNext = [];
   for (let i = 0; i < 7; i++) {
     WeekDaysNext.push(
-      daysWeek[new Date(Date.now() + i * 24 * 60 * 60 * 1000).getDay()]
+      daysWeek[new Date(Date.now() + (i + 1) * 24 * 60 * 60 * 1000).getDay()]
     );
   }
   const d = new Date(props.date).getDay();

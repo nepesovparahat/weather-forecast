@@ -41,14 +41,16 @@ const MainWeather = () => {
         setDays(dayArr);
         e.target.value = "";
       }
+
+      setTimeout(() => {
+        e.target.classList.remove("loading");
+      }, 2000);
     }
-    setTimeout(() => {
-      e.target.classList.remove("loading");
-    }, 2000);
   };
+
   const style = useStyles({
     inputStyle: {
-      top: cityName ? "-90px" : "20px",
+      top: cityName ? "-218px" : "20px",
       width: "600px",
       display: "inline-block",
       padding: "10px 0px 10px 30px",
@@ -58,8 +60,7 @@ const MainWeather = () => {
       outline: "none",
       fontSize: "20px",
       transition: "all 0.5s ease-out",
-      boxShadow: !error ? "inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd,-3px 3px 30px #10abff"
-        : "inset 0 0 0 2px #fff, 0 0 0 3px #fff, 2px -2px 20px red,-2px 2px 20px red",
+      boxShadow: error ? "inset 0 0 0 2px #fff, 0 0 0 3px #fff, 2px -2px 20px red,-2px 2px 20px red" : null,
     },
   });
   // With the map function, I deleted the first object of the 5-day weather forecast object and added it to divs.
@@ -79,9 +80,6 @@ const MainWeather = () => {
           <input
             type="text"
             style={style.inputStyle}
-            name="city"
-            className="city-name"
-            id="inputCity"
             placeholder="Enter Country or City name..."
             onKeyPress={getWeather}
           />
@@ -89,9 +87,9 @@ const MainWeather = () => {
         <h1>
           {cityName} {Countr}
         </h1>
-        <div>
-          <WeatherBoxes />
-        </div>
+      </div>
+      <div>
+        <WeatherBoxes />
       </div>
     </>
   );

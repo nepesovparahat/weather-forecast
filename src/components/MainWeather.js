@@ -28,10 +28,10 @@ const MainWeather = () => {
         for (let i = 0; i < Object.keys(response.list).length; i++) {
           if (i % 8 === 0)
             dayArr.push({
-              weather_desc: response.list[i + 1].weather[0].description,
-              date: response.list[i + 1].dt_txt,
-              icon: response.list[i + 1].weather[0].icon,
-              temp: response.list[i + 1].main.temp,
+              weather_desc: response.list[i].weather[0].description,
+              date: response.list[i].dt_txt,
+              icon: response.list[i].weather[0].icon,
+              temp: response.list[i].main.temp,
             });
         }
         e.target.placeholder = "Enter Country or City name...";
@@ -60,10 +60,12 @@ const MainWeather = () => {
       outline: "none",
       fontSize: "20px",
       transition: "all 0.5s ease-out",
-      boxShadow: error ? "inset 0 0 0 2px #fff, 0 0 0 3px #fff, 2px -2px 20px red,-2px 2px 20px red" : null,
+      boxShadow: error
+        ? "inset 0 0 0 2px #fff, 0 0 0 3px #fff, 2px -2px 20px red,-2px 2px 20px red"
+        : null,
     },
   });
-  // With the map function, I deleted the first object of the 5-day weather forecast object and added it to divs.
+  // With the map function, I showed 5-day weather forecast object and added it to divs.
   const WeatherBoxes = () => {
     const weatherBoxes = days.map((day, index) => (
       <li key={index}>
@@ -73,6 +75,7 @@ const MainWeather = () => {
 
     return <ul className="weather-box-list">{weatherBoxes}</ul>;
   };
+
   return (
     <>
       <div className="main">

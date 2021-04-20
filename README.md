@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+## Weather Forecast App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Find the current weather forecast for any city or location in the world for 5 days with this simple little web app.
 
-## Available Scripts
+> ### Project : [Live Demo](https://friendly-poitras-bd33ab.netlify.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Screenshots Weather App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Screenshot from 2021-04-16 18-57-53](https://user-images.githubusercontent.com/67821216/115051899-faf52000-9ee5-11eb-9fde-3fbb07a92f38.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
 
-### `npm run build`
+**Builded with :**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [reactjs](https://reactjs.org/docs/create-a-new-react-app.html) (hooks) version : 17.0.1
+- [axios](https://www.npmjs.com/package/axios) version : 0.21.1
+- [react-styles-hook](https://www.npmjs.com/package/react-styles-hook) version : 1.1.2
+- [openweathermap](https://openweathermap.org/api) version : 2.0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Procedure
 
-### `npm run eject`
+In my process of learning React, I always make a new application to add information to my knowledge and to consolidate that knowledge practically. Based on these, I made a small weather forecast application. This app has helped me gain important information about react and learn where and how to use it. For example, it led me to learn more about the props used in react.
+In this project, used the most used `axios` for HTTP queries, and the API address of OpenWeatherMap, which displays a 5-day forecast to display weather forecast information. When it comes to the design of the application, pure css was used. Furthermore, `react-styles-hook` i used for animation and css operator in the input area.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Environment Variables
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### How to run the application locally:
 
-## Learn More
+- Go to OpenWeatherMap and sign up to get a free API key.
+- Next, you will need to set your environment variables and secret keys like `API KEYS`, which will be ignored by git. To do this, go to the project root directory and create an .env file.
+- Add `REACT_APP_API_KEY = YOUR_API_KEY ` line to the file. This will allow you to access API_KEY as a global variable from anywhere on the client. .env the file is already set to .gitignor and will be ignored by git.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Setup Project :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+$ cd Weather-Forecast
+$ npm install
+$ npm start
+```

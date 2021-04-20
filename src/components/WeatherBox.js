@@ -15,9 +15,9 @@ const WeatherBox = (props) => {
   ];
 
   const WeekDaysNext = [];
-  for (let i = 0; i < 7; i++) {
+  for (let i = 1; i <= 7; i++) {
     WeekDaysNext.push(
-      daysWeek[new Date(Date.now() + (i + 1) * 24 * 60 * 60 * 1000).getDay()]
+      daysWeek[new Date((i + 1) * 24 * 60 * 60 * 1000).getDay()]
     );
   }
   const d = new Date(props.date).getDay();

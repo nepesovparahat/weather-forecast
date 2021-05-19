@@ -45,86 +45,100 @@ input:focus {
     align-items: center;
   }
 }
+.header{
+  font-size: 24px;
+}
+.header-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  color: white;
+  margin: 50px 50px 0 50px;
+}
 
+/*----- MainWeather css------ */
+.main {
+  z-index: 1;
+  position: relative;
+  height: 480px;
+  width: 90%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5% 0 5%;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 15px silver;
+}
+.inner-main {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+input{
+  font-size: 15px;
+  width: 230px;
+}
+
+/*------- Weatherbox css ---------*/
+
+.weather-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 30%;
+  background-color: rgba(255, 255, 255, 0.507);
+  box-shadow: 3px 0px 8px silver;
+  padding-bottom: 10px;
+  margin: 15px;
+  z-index: 2;
+}
+.weather-box-list > li {
+  list-style-type: none;
+}
+.weather-box-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-flow: row wrap;
+  bottom: 120px;
+}
+.weather-box > h1 {
+  font-size: 18px;
+}
+
+.temp {
+  font-size: 1.1em;
+}
+
+.weather-desc {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 410;
+}
+.days {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
 /*----------------- Media only screen phone ------------------*/
-@media only screen and (min-width: 480px) {
-  .header-weather {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    color: white;
-    margin: 50px 50px 0 50px;
-  }
-
-  /*----- MainWeather css------ */
-  .main {
-    z-index: 1;
-    position: relative;
-    height: 480px;
-    width: 90%;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 5% 0 5%;
-    align-items: center;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 0px 15px silver;
-  }
-  .inner-main {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  /*------- Weatherbox css ---------*/
-
-  .weather-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 220px;
-    height: 220px;
-    border-radius: 30%;
-    background-color: rgba(255, 255, 255, 0.507);
-    box-shadow: 3px 0px 8px silver;
-    padding-bottom: 10px;
-    margin: 15px;
-    z-index: 2;
-  }
-  .weather-box-list > li {
-    list-style-type: none;
-  }
-  .weather-box-list {
-    position: relative;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: center;
-    flex-flow: row wrap;
-    bottom: 120px;
-  }
-  .weather-box > h1 {
+@media only screen and (min-width: 560px) {
+  input{
     font-size: 20px;
+    width: 600px;
   }
-
-  .temp {
-    font-size: 1.1em;
-  }
-
-  .weather-desc {
-    text-transform: capitalize;
-    font-size: 18px;
-    font-weight: 410;
-  }
-  .days {
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: 22px;
+  .header{
+    font-size: 36px;
   }
 }

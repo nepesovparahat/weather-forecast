@@ -51,18 +51,16 @@ const MainWeather = () => {
   const style = useStyles({
     inputStyle: {
       top: cityName ? "-218px" : "20px",
-      width: "600px",
       display: "inline-block",
       padding: "10px 0px 10px 30px",
-      lineHeight: "20px",
       position: "relative",
       borderRadius: "20px",
       outline: "none",
-      fontSize: "20px",
       transition: "all 0.5s ease-out",
       boxShadow: error
         ? "inset 0 0 0 2px #fff, 0 0 0 3px #fff, 2px -2px 20px red,-2px 2px 20px red"
         : null,
+        
     },
   });
   // With the map function, I showed 5-day weather forecast object and added it to divs.
@@ -87,7 +85,7 @@ const MainWeather = () => {
             onKeyPress={getWeather}
           />
         </div>
-        <h1>
+        <h1 className="header">
           {cityName} {Countr}
         </h1>
       </div>

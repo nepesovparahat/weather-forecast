@@ -18,16 +18,16 @@
 
 **Builded with :**
 
-- [reactjs](https://reactjs.org/docs/create-a-new-react-app.html) (hooks) version : 17.0.1
-- [axios](https://www.npmjs.com/package/axios) version : 0.21.1
-- [react-styles-hook](https://www.npmjs.com/package/react-styles-hook) version : 1.1.2
-- [openweathermap](https://openweathermap.org/api) version : 2.0
+- [ReactJS](https://reactjs.org/docs/create-a-new-react-app.html) (hooks) version : 17.0.1
+- [Axios](https://www.npmjs.com/package/axios) version : 0.21.1
+- [React Styles Hook](https://www.npmjs.com/package/react-styles-hook) version : 1.1.2
+- [OpenWeatherMap](https://openweathermap.org/api) version : 2.0
 
 ---
 
 ## Project Procedure
 
-In my process of learning React, I always make a new application to add information to my knowledge and to consolidate that knowledge practically. Based on these, I made a small weather forecast application. This app has helped me gain important information about react and learn where and how to use it. For example, it led me to learn more about the props used in react.
+In my process of learning ReactJS, I always make a new application to add information to my knowledge and to consolidate that knowledge practically. Based on these, I made a small weather forecast application. This app has helped me gain important information about ReactJS and learn where and how to use it. For example, it led me to learn more about the props used in react.
 In this project, used the most used `axios` for HTTP queries, and the API address of OpenWeatherMap, which displays a 5-day forecast to display weather forecast information. When it comes to the design of the application, pure css was used. Furthermore, `react-styles-hook` i used for animation and css operator in the input area.
 
 ##
@@ -49,7 +49,7 @@ In this project, used the most used `axios` for HTTP queries, and the API addres
 ## Setup Project :
 
 ```sh
-$ cd Weather-Forecast
+$ cd weather-forecast
 $ npm install
 $ npm start
 ```
